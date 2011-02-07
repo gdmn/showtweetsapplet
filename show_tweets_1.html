@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+    <head>
+        <title>Last twitts</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <script language="javascript">
+            function fetchTweets(){
+                alert(myApplet);
+                // invoke public applet method
+                var greeting = myApplet.getTweets();
+                document.writeln("" + greeting + "");
+            }
+        </script>
+
+    </head>
+    <body>
+        <script src="http://www.java.com/js/deployJava.js"></script>
+
+        <!--
+          <script src="http://www.java.com/js/deployJava.js"></script>
+          applet id can be used to get a reference to the applet object -->
+        <script>
+            var attributes = { id:'myApplet', code:'ShowTweetsApplet',  width:611, height:211} ;
+            //var attributes = { id:'myApplet',
+            //	codebase:'dist/', archive:'ShowTweetsApplet.jar',
+            //	code:'ShowTweetsApplet',
+            //	width:330, height:210} ;
+
+            var parameters = {jnlp_href: 'tweets-applet.jnlp', hidden: 'false'} ;
+            //var parameters = {hidden: 'false'} ;
+            deployJava.runApplet(attributes, parameters);
+            alert(myApplet);
+        </script>
+
+        <h3>Last twitts</h3>
+
+        <script>
+            fetchTweets();
+        </script>
+
+        <!-- script language="JavaScript" src="/js/omi/jsc/s_code_remote.js"></script -->
+
+    </body>
+</html>

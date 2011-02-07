@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jnlp spec="1.0+" codebase="" href="">
+    <information>
+        <title>ShowTweetsApplet</title>
+        <vendor>dmn</vendor>
+        <homepage href=""/>
+        <description>ShowTweetsApplet</description>
+    </information>
+    <security>
+      <all-permissions/>
+    </security>
+    <resources>
+        <!-- Application Resources -->
+        <j2se version="1.6+"
+              href="http://java.sun.com/products/autodl/j2se" />
+        <jar href="ShowTweetsApplet.jar" main="true" />
+
+    </resources>
+    <applet-desc
+         name="ShowTweetsApplet"
+         main-class="ShowTweetsApplet"
+         width="200"
+         height="200">
+             <param name="hidden" value="false"/>
+     </applet-desc>
+     <update check="background"/>
+</jnlp>

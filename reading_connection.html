@@ -1,0 +1,27 @@
+<HTML><HEAD>
+<SCRIPT language = "Javascript">
+var data = new Array();
+var i = 0;
+var datafile = window.location.href.substring(0,
+     window.location.href.lastIndexOf("/") + 1) +
+     "data.txt";
+     datafile = "http://lists.evolt.org/pipermail/javascript/2003-September/005754.html";
+var url = new java.net.URL(datafile);
+var connect = url.openConnection();
+var input = new java.io.BufferedReader(
+     new java.io.InputStreamReader(
+         connect.getInputStream()));
+var aLine = ""
+while((aLine = input.readLine()) != null) {
+    data[i++] = aLine;
+    }
+</SCRIPT>
+<BODY>
+
+<SCRIPT language = "Javascript">
+var temp = ""
+for (var j = 0; j < data.length ; j++)
+    temp += data[j] + "<br>";
+document.write(temp);
+</SCRIPT>
+</BODY></HTML>
